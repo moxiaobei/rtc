@@ -1,0 +1,26 @@
+{
+  "name": "rtc",
+  "version": "0.0.0",
+  "description": "An simple tool which transform retina screen image to common screen image. It decreases image size and it more adaptive in common screen.",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moxiaobei/rtc.git"
+  },
+  "keywords": [
+    "retina",
+    "screen",
+    "common",
+    "screen",
+    "decrease"
+  ],
+  "author": "donghualei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/moxiaobei/rtc/issues"
+  },
+  "homepage": "https://github.com/moxiaobei/rtc#readme"
+}
