@@ -1,6 +1,6 @@
 {
   "name": "retina2common",
-  "version": "0.0.6",
+  "version": "0.0.10",
   "description": "An simple tool which transform retina screen image to common screen image. It decreases image size and it more adaptive in common screen.",
   "main": "index.js",
   "scripts": {
@@ -28,6 +28,9 @@
   },
   "bin": {
     "retina2common": "./bin/retina2common"
+  },
+  "engines": {
+    "node": ">=0.10"
   },
   "dependencies": {
     "minimist": "^1.1.1",
