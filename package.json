@@ -1,6 +1,6 @@
 {
   "name": "retina2common",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "An simple tool which transform retina screen image to common screen image. It decreases image size and it more adaptive in common screen.",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,12 @@
     "screen",
     "common",
     "screen",
-    "decrease"
+    "decrease",
+    "images",
+    "png",
+    "jpg",
+    "jpeg",
+    "gif"
   ],
   "author": "donghualei",
   "license": "MIT",
