@@ -22,8 +22,25 @@ var commond = {
     help: function () {
         console.log(
             [
-                'test',
-                'test'
+                'Usage: retina2common [options] files|directory',
+                '',
+                'Description: reduce your image by half',
+                '    the image will be save as   XXX@1x.XXX, the old image also exits',
+                'Options:',
+                '   -o, --output     the path to save',
+                '   -h, --help       print this help page',
+                '   -v, --version    print program version',
+                '',
+                'Examples:',
+                '  Single File',
+                '  eg: retina2common image.png',
+                '',
+                '  Sing Directory',
+                '  eg: retina2common ../test',
+                '',
+                '  Multiple Files',
+                '  eg: retina2common foo.png bar.png  baz.png  quex.png',
+                ''
             ].join('\n')
         );
     },
@@ -59,7 +76,6 @@ var app = {
             return path.resolve(process.env.PWD, f);
         });
 
-        // console.log(files);
         opt.input = files;
 
         var rtc = new Retina2Common(opt);

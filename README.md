@@ -30,7 +30,8 @@ var opt = {
         '*.jpg',
         '*.png',
         '*.gif'
-    ]
+    ],
+    onComplete: function () {}
 };
 
 var r2c = new Retina2Common();

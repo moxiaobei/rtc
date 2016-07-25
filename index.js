@@ -8,7 +8,6 @@ var path = require('path');
 var underscore = require('underscore');
 var minimatch = require('minimatch');
 var util = require('./lib/util');
-// var im = require('imagemagick');
 var gm = require('gm');
 var imageMagick = gm.subClass({ imageMagick : true });
 
@@ -22,7 +21,8 @@ var defaultOpt = {
     ],
     input: [],
     output: '',
-    onFileProcessed: function () {}
+    count: 0,
+    onComplete: function () {}
 }
 
 
@@ -144,10 +144,15 @@ Retina2Common.prototype.processSingle = function (fileInfo) {
         }
 
         gm(fileInfo.path).resizeExact(imageWidth / 2, imageHeight / 2).write(outputPath, function (err) {
-            if (!err) {
-                console.log('success');
+            me.count++;
+            if(me.count === me.fileList.length) {
+                if (!err) {
+                    console.log('All images are successful');
+                }
+                me.onComplete && me.onComplete();
             }
         });
+        console.log('test');
     });
 }
 
