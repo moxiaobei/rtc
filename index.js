@@ -112,7 +112,6 @@ Retina2Common.prototype.process = function () {
 
     this.count = 0;
     this.fileList.forEach(function (fileInfo) {
-        console.log(fileInfo);
         me.processSingle(fileInfo);
     });
 };
@@ -144,6 +143,11 @@ Retina2Common.prototype.processSingle = function (fileInfo) {
         }
 
         gm(fileInfo.path).resizeExact(imageWidth / 2, imageHeight / 2).write(outputPath, function (err) {
+            if (err) {
+                console.log(err);
+            }
+            console.log(outputPath);
+
             me.count++;
             if(me.count === me.fileList.length) {
                 if (!err) {
@@ -152,7 +156,6 @@ Retina2Common.prototype.processSingle = function (fileInfo) {
                 me.onComplete && me.onComplete();
             }
         });
-        console.log('test');
     });
 }
 
